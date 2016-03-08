@@ -21,7 +21,9 @@
 - No multiple triggers on the same object
 - Code invoked by triggers is bulkified to process multiple records at once
 - Loops don’t contain SOQL, SOSL, Describe, `sendMails` or HTTP callouts
-- The transient keyword is used for variables that are not required to maintain page state
+- Loops don't contain calls to `@future` methods
+- The `transient` keyword is used for variables that are not required to maintain page state
+- All SOQL queries include a `LIMIT` statement to limit the result set
 
 #Security
 
@@ -36,7 +38,7 @@
 - Boundary conditions are tested
 - Error conditions are tested
 - Behaviour with data bulks is tested
-- Tests are data isolated (`@SeeAllData=false`)
+- Tests are data isolated using `@SeeAllData=false`
 - Tests are network isolated by leveraging the `HttpCalloutMock` or `WebServiceMock` interfaces
 - Errors are transactionally rolled back
 - Tests use object factories to create instances of standard or custom objects and setup their own data
