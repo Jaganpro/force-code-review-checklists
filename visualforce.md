@@ -20,6 +20,6 @@
 
 #Security
 
-- Text and merge fields to be used in JavaScript are escaped using `JSENCODE` to prevent XSS vulnerabilities
-- All HTML directly generated with data coming from server uses `HTMLENCODE` to prevent XSS vulnerabilities
-- All URLs composed with data coming from server use `URLENCODE` to prevent XSS vulnerabilities
+- Text and merge field values for use in JavaScript are escaped using `JSENCODE` to prevent XSS vulnerabilities
+- Text and merge field values for use in HTML are escaped using `HTMLENCODE` to prevent XSS vulnerabilities
+- Text and merge field values for use in URLs are escaped using `URLENCODE` to prevent XSS vulnerabilities
