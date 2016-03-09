@@ -1,10 +1,10 @@
-# Code Review Checklists
+# Force.com Code Review Checklists
 
-I am a big advocate of code reviews. I strongly encourage every team to adopt code reviews before merging each one's contribution into the codebase.Code reviews don't take long and have many benefits:
+I am a big advocate of code reviews. I strongly encourage every team to adopt code reviews before merging each one's contribution into the codebase. Code reviews don't take long and have many benefits:
 
 
-* they encourage developers to learn from each other
-* they make people write better code
+* they make developers to learn from each other
+* they encourage people write better code
 * they help disseminating best practices
 * they make the code consistent and easier to maintain
 
