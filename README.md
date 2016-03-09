@@ -3,10 +3,10 @@
 I am a big advocate of code reviews. I strongly encourage every team to adopt code reviews before merging each one's contribution into the codebase. Code reviews don't take long and have many benefits:
 
 
-* they make developers to learn from each other
-* they encourage people write better code
+* they make developers learn from each other
+* they encourage people to write better code
 * they help disseminating best practices
-* they make the code consistent and easier to maintain
+* they help keeping the code internally consistent and easier to maintain
 
 These are the checklists I use for code reviews when working on Force.com projects. Enjoy!
 
