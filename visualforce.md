@@ -14,7 +14,7 @@
 
 - Expensive calculations and data loading are lazy-loaded using JavaScript remoting and the `reRender` attribute
 - The `actionRegion` tag is used to demarcate relevant regions for AJAX requests
-- Both CSS and JavaScript are imported as static resources
+- Static CSS and JavaScript are imported as static resources
 - CSS resources are referred at the top of the page
 - JavaScript resources are referred at the bottom of the page
 
