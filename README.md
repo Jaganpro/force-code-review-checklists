@@ -7,6 +7,7 @@ I am a big advocate of code reviews. I strongly encourage every team to adopt co
 * they encourage people to write better code
 * they help disseminating best practices
 * they help keeping the code internally consistent and easier to maintain
+* they reduce costs due to later reworks
 
 These are the checklists I use for code reviews when working on Force.com projects. Enjoy!
 
@@ -15,8 +16,8 @@ These are the checklists I use for code reviews when working on Force.com projec
 - Keep your code simple. Do not overcomplicate problems.
 - Keep your code easy to read for humans.
 - Avoid everything that is not necessary: every line of code that is not needed is a potential bug.
+- Remember that the point of reviews is to spot problems. Don't take things personally.
 - Accept you will make mistakes.
-- You are not your code, don't take things personally.
 
 ## Tips for reviewers
 
