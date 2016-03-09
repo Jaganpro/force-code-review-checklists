@@ -21,11 +21,10 @@ These are the checklists I use for code reviews when working on Force.com projec
 ## Tips for reviewers
 
 - Code reviews should last no more than 15 minutes.
-- Don't review more than 400 lines of code at a time.
-- Be kind to the coder, not to the code.
-- Treat people who know less than you with respect and patience.
+- Try to review no more than 400 lines of code at a time.
 - Ask questions rather than making statements.
-- Avoid the "Why?" question.
+- Avoid asking "Why did you do X?". Ask instead "Have you considered Y?"
+- Treat people who know less than you with respect and patience.
 - Remember to praise.
 - Remember that there is often more than one way to approach a solution.
 
