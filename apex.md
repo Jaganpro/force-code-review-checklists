@@ -17,6 +17,7 @@
 - Code make the use of the appropriate design pattern, when applicable
 - No multiple triggers on the same object
 - No both workflows and triggers on the same objects at the same time
+- Tests use object factories to create object instances and to setup their own data
 
 #Performances
 
@@ -33,6 +34,7 @@
 - CRUD is enforced using  `isCreateable()`, `isDeletable()` on SObject updates, creates, or deletes done within controllers, controller extensions and Web Services
 
 #Robustness
+
 - If methods use multiple DMLs, transaction control/savepoints are used to preserve data integrity on errors
 - Positive scenarios are tested
 - Negative scenarios are tested
@@ -42,4 +44,4 @@
 - User authorisastion is tested
 - Tests are data-isolated by using `@SeeAllData=false`
 - Tests are network-isolated by using the `HttpCalloutMock` or `WebServiceMock` interfaces
-- Tests use object factories to create instances of standard or custom objects and setup their own data
+
