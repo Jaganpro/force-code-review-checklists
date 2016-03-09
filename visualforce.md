@@ -8,11 +8,11 @@
 - No code duplication is found or introduced
 - Visualforce components are used whenever necessary to avoid code repetition
 - Field sets are used to dynamically bind fields
-- `URLFOR` is used to generate all links to records
+- `URLFOR` is used to generate all links to records or standard views
 
 #Performances
 
-- Expensive calculation and data loading are lazy-loaded using JavaScript remoting and the `reRender` attribute
+- Expensive calculations and data loading are lazy-loaded using JavaScript remoting and the `reRender` attribute
 - The `actionRegion` tag is used where applicable to limit the size of the view state
 - Both CSS and JavaScript are imported as static resources
 - CSS resources are referred at the top of the page
