@@ -2,43 +2,44 @@
 #Readability
 
 - No dead code is found or introduced
-- Style conventions are consistently applied (indentation, use of spaces and brackets)
-- Comments are used to clarify the “why” (not the “what”) of all the most complex parts of the code
-- Comments are simple, meaningful and written in English
+- Style conventions apply (indentation, use of spaces and brackets)
+- Comments are in simple, meaningful English
+- Comments are used to clarify the “why” (not the “what”) the most complex code sections
+
 
 #Maintainability
 
-- Naming conventions are consistently applied (variables, methods, classes)
+- Code is simple and not unnecessarily complicated
+- Naming conventions apply (variables, methods, classes, pages, components)
 - No code duplication is found or introduced
-- Code does not contain any hardcoded IDs
-- Code is kept simple and not unnecessarily complicated
+- Code doesn't contain any hardcoded IDs
 - Core parameters are easy to maintain by using constants, custom settings or custom metadata types
 - Code make the use of the appropriate design pattern, when applicable
-- No logic split between workflows/triggers on the same object
+- No multiple triggers on the same object
+- No both workflows and triggers on the same objects at the same time
 
 #Performances
 
-- No multiple triggers on the same object
 - Code invoked by triggers is bulkified to process multiple records at once
-- Loops don’t contain SOQL, SOSL, Describe, `sendMails` or HTTP callouts
-- Loops don't contain calls to `@future` methods
-- The `transient` keyword is used for variables that are not required to maintain page state
-- All SOQL queries include a `LIMIT` statement to limit the result set
+- Loops don’t contain SOQL, SOSL, `sendMails`, HTTP callouts or calls to `@future` methods
+- The `transient` keyword is used for variables that are not strictly required to maintain page state
+- All SOQL queries include a `LIMIT` to prevent exceeding the allowed resultset size
 
 #Security
 
 - Dynamic SOQL/SOSL are not used if a solution exists using standard bracket notation
 - All input variables in dynamic SOQL/SOSL statements are escaped using `String.escapeSingleQuotes()`
-- CRUD/FLS are enforced using `isUpdateable()`, `isCreateable()`, `isAccessible()`, `isDeletable()` on field and SObject updates, creates, or deletes done within controllers, controller extensions and Web Services
+- FLS is enforced using `isUpdateable()`, `isAccessible()` on fields read or written in controllers, controller extensions and Web Services
+- CRUD is enforced using  `isCreateable()`, `isDeletable()` on SObject updates, creates, or deletes done within controllers, controller extensions and Web Services
 
-#Testing Standards
-
+#Robustness
+- If methods use multiple DMLs, transaction control/savepoints are used to preserve data integrity on errors
 - Positive scenarios are tested
 - Negative scenarios are tested
 - Boundary conditions are tested
 - Error conditions are tested
 - Behaviour with data bulks is tested
-- Tests are data isolated using `@SeeAllData=false`
-- Tests are network isolated by leveraging the `HttpCalloutMock` or `WebServiceMock` interfaces
-- Errors are transactionally rolled back
+- User authorisastion is tested
+- Tests are data-isolated by using `@SeeAllData=false`
+- Tests are network-isolated by using the `HttpCalloutMock` or `WebServiceMock` interfaces
 - Tests use object factories to create instances of standard or custom objects and setup their own data
